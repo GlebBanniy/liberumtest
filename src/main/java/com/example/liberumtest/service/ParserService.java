@@ -1,7 +1,6 @@
 package com.example.liberumtest.service;
 
 import com.example.liberumtest.dto.DataDto;
-import org.apache.commons.collections4.list.SetUniqueList;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -12,11 +11,8 @@ import org.springframework.stereotype.Service;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class ParserService {
@@ -24,7 +20,7 @@ public class ParserService {
     private final DataService dataService;
     private final EstimateService estimateService;
     private final ContentService contentService;
-    private List<String> data;
+    private final List<String> data;
 
     @Autowired
     public ParserService(DataService dataService, EstimateService estimateService, ContentService contentService) {
